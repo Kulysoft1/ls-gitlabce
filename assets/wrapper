@@ -62,6 +62,9 @@ echo "Starting services..."
 echo "Configuring GitLab..."
 gitlab-ctl reconfigure
 
+#Start the mail server for signups
+/etc/init.d/postfix restart
+
 # Tail all logs
 #gitlab-ctl tail &
 
