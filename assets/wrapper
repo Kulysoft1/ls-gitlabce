@@ -70,3 +70,4 @@ gitlab-ctl reconfigure
 
 # Wait for SIGTERM
 wait
+
