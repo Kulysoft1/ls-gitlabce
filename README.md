@@ -1,6 +1,7 @@
 Run the image:
 
-sudo docker run --detach \
+
+	sudo docker run --detach \
 
 	--hostname gitlab.example.com \
 
