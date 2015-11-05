@@ -63,6 +63,9 @@ echo "Configuring GitLab..."
 gitlab-ctl reconfigure
 
 #Start the mail server for signups
+rm -f /var/lib/postfix/master.lock
+/usr/sbin/postfix -c /etc/postfix/ set-permissions
+update-rc.d postfix defaults
 /etc/init.d/postfix restart
 
 # Tail all logs
@@ -70,4 +73,3 @@ gitlab-ctl reconfigure
 
 # Wait for SIGTERM
 wait
-
